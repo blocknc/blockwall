@@ -817,7 +817,7 @@ html.wf-design-mode .page_contain {
 	--block--background-hover: var(--swatch--light-fade);
 	--block--border-hover: var(--swatch--light);
 	/*block secondary */
-	--block-secondary--background: var(--swatch--light-fad-soft);
+	--block-secondary--background: var(--swatch--light-fade-soft);
 	--block-secondary--border: var(--swatch--light-fade);
 	--block-secondary--background-hover: var(--swatch--light-fade);
 	--block-secondary--border-hover: var(--swatch--dark-fade);
