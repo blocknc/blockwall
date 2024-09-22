@@ -868,9 +868,9 @@ html.wf-design-mode .page_contain {
 	--block--background-hover: var(--swatch--light-fade);
 	--block--border-hover: var(--swatch--light);
 	/*block secondary */
-	--block-secondary--background: var(--swatch--light-fade-soft);
-	--block-secondary--border: var(--swatch--light-fade);
-	--block-secondary--background-hover: var(--swatch--light-fade);
+	--block-secondary--background: var(--swatch--light-fade);
+	--block-secondary--border: var(--theme--footer);
+	--block-secondary--background-hover: var(--swatch--light-fade-soft);
 	--block-secondary--border-hover: var(--swatch--dark-fade);
 	/*decode block */
 	--block-decode--background: var(--swatch--dark-fade-soft);
