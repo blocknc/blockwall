@@ -63,6 +63,7 @@
 .line-y {
 	transform: translate(0px, -0.1em);
 	min-height: 1.17em;
+	/* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); */
 }
 
 .line-fade {
@@ -94,6 +95,7 @@
 	opacity: 0;
 }
 
+/* portfolio-section */
 html.wf-design-mode .cms_item_text {
 	display: block;
 	opacity: 1;
@@ -116,7 +118,7 @@ html.wf-design-mode .cms_item_text {
 
 .portfolio_cms_item {
 	position: relative;
-	transition: color 0.25s ease-out; 
+	transition: color 0.25s ease-out; /* Übergangseffekt für die Textfarbe */
 }
 
 .cms_item_wrap {
@@ -270,7 +272,7 @@ html.wf-design-mode .w-pagination-wrapper.pagination {
 }
 
 .filter_search {
-	position: absolute; 
+	position: absolute; /* Änderung: Von absolute zu relative für eine bessere Platzierung */
 	display: flex;
 	height: 100%;
 	align-items: center;
@@ -278,23 +280,23 @@ html.wf-design-mode .w-pagination-wrapper.pagination {
 }
 
 .search-with-icon {
-	padding-right: 32px; 
+	padding-right: 32px; /* Passe diesen Wert nach Bedarf an */
 	background-color: transparent;
-	border: none; 
-	outline: none; 
-	color: var(--swatch--brand-gray-500); 
+	border: none; /* Standard Border entfernt */
+	outline: none; /* Entfernt die Standard-Umrandung beim Fokussieren */
+	color: var(--swatch--brand-gray-500); /* Ändere die Textfarbe */
 	max-width: 16ch;
 	width: 100%;
 }
 
 .search-with-icon::placeholder {
-	color: var(--swatch--brand-gray-500); 
+	color: var(--swatch--brand-gray-500); /* Ändere die Platzhalterfarbe */
 }
 
 .search-with-icon:focus {
-	border: none; 
-	outline: none; 
-	color: var(--theme--text); 
+	border: none; /* Sicherstellen, dass keine Border angezeigt wird */
+	outline: none; /* Sicherstellen, dass keine Umrandung angezeigt wird */
+	color: var(--theme--text); /* Ändere die Textfarbe */
 }
 
 .search-icon {
@@ -302,14 +304,14 @@ html.wf-design-mode .w-pagination-wrapper.pagination {
 	right: 10px;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 16px; 
+	width: 16px; /* Passe die Größe des Icons an */
 	height: 16px;
-	pointer-events: none; 
+	pointer-events: none; /* Verhindert, dass das Icon klickbar ist */
 }
 
 .filter_search:focus-within .search-icon path {
 	fill: var(--swatch--brand);
-	transition: 0.3s ease-out; 
+	transition: 0.3s ease-out; /* Ändere die Farbe des Icons, wenn das Input-Feld fokussiert ist */
 }
 
 html.wf-design-mode .portfolio_filter_menu {
@@ -326,12 +328,15 @@ html.wf-design-mode .layout_footer_legal {
 	min-height: 60vh;
 }
 
+/* Grundlegende Stile für die Team-Items */
+
 .team_list_contain {
 	display: grid;
-	grid-auto-flow: dense;
+	grid-auto-flow: dense; /* Füllt die Lücken im Grid automatisch */
 }
 
 /* Standard-Layout für Desktop (min-width: 991px) */
+
 .team_list_item {
 	grid-column: auto / span 1;
 	grid-row: auto / span 1;
@@ -361,17 +366,20 @@ html.wf-design-mode .layout_footer_legal {
 	}
 }
 
+/* Standardmäßig alle Bilder in Graustufen */
 [data-tp='img'] {
 	filter: grayscale(100%);
-	transition: filter 0.3s ease; 
+	transition: filter 0.3s ease; /* Sanfter Übergang für den Hover-Effekt */
 }
 
+/* Hover-Effekt für Bilder: Zurück zur Farbe */
 .team_list_item:hover [data-tp='img'] {
 	filter: grayscale(0%);
 }
 
+/* Stil für das aktive Element */
 .team_list_item.active [data-tp='img'] {
-	filter: grayscale(0%); 
+	filter: grayscale(0%); /* Bild bleibt farbig */
 }
 
 .layout_narrow_contain {
@@ -388,10 +396,10 @@ input:-webkit-autofill:focus {
 	transition: background-color 5000s ease-in-out 0s !important;
 	color: var(
 		--theme--text
-	) !important; 
+	) !important; /* Sicherstellen, dass die Textfarbe korrekt ist */
 	caret-color: var(
 		--theme--text
-	) !important; 
+	) !important; /* Setzt die Cursorfarbe auf dieselbe Farbe wie der Text */
 }
 
 .form_main_field_input:focus-visible {
@@ -457,6 +465,31 @@ html.wf-design-mode .layout_ppreview_wrap {
 	.legal_nav_sub_wrap {
 	grid-template-rows: 1fr;
 }
+
+/* html.wf-design-mode .layout_team_contain {
+	height: auto;
+	display: block;
+}
+
+.layout_team_contain.u-container {
+	height: auto;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+} */
+
+/* html.wf-design-mode [data-feature='title'],
+html.wf-design-mode [data-card='svg'],
+html.wf-design-mode [data-card='text'],
+html.wf-design-mode [data-card='title'] {
+	opacity: 1;
+}
+[data-feature='title'],
+[data-card='svg'],
+[data-card='text'],
+[data-card='title'] {
+	opacity: 0;
+} */
 
 :root {
 	--font--inherit: inherit;
@@ -614,6 +647,7 @@ footer {
 }
 .custom-substack-widget {
 	gap: var(--size--1rem);
+	/* contain-intrinsic-block-size: AUTO 48px; */
 	border: none;
 	display: inline-flex;
 	height: auto;
@@ -709,7 +743,10 @@ footer {
 		grid-column: 3 / 3 !important;
 	}
 }
-
+/* div svg path {
+	stroke: var(--theme--card-bg);
+	stroke-width: 0.5px;
+} */
 html.lenis,
 html.lenis body {
 	height: auto;
@@ -751,18 +788,18 @@ html.wf-design-mode .layout_transition_wrap {
 .logo_wrap.is-v2 {
 	display: none;
 	opacity: 0;
-	transform: translateY(-100%);
+	transform: translateY(-100%); /* Start außerhalb des sichtbaren Bereichs */
 }
 
 html.wf-design-moide .logo_wrap.is-v1 {
-	display: block; 
+	display: block; /* Startet unsichtbar */
 	opacity: 1;
-	transform: translateY(0%); 
+	transform: translateY(0%); /* Start außerhalb des sichtbaren Bereichs */
 }
 html.wf-design-mode .logo_wrap.is-v2 {
-	display: block; 
+	display: block; /* Startet unsichtbar */
 	opacity: 1;
-	transform: translateY(0%); 
+	transform: translateY(0%); /* Start außerhalb des sichtbaren Bereichs */
 }
 
 html.wf-design-mode .page_contain {
@@ -775,6 +812,20 @@ html.wf-design-mode .page_contain {
 	align-items: center;
 }
 
+/* .layout_hero_titel {
+	font-kerning: none;
+} */
+
+/* .layout_ppreview_wrap {
+	height: 250vh;
+}
+.layout_ppreview_grid {
+	height: 100%;
+}
+
+.cms_portfolio_wrapper {
+	height: 100%;
+} */
 
 /* CSS Variables */
 /* theme light */
@@ -905,25 +956,26 @@ html.wf-design-mode .page_contain {
 	--block--border-hover: var(--block-secondary--border-hover);
 }
 
-
+/* apply colors */
 :is(c, :where([data-theme]:not([data-theme='inherit']))) {
 	background-color: var(--theme--background);
 	color: var(--theme--text);
 }
-
+/* SVG hover animation */
 [data-svg-hover='true'] {
 	cursor: pointer;
 }
 [data-svg-hover='true']:hover {
 	fill: var(--swatch--brand);
 }
-
+/* Dropdown CSS */
 select#select-1 {
 	background-color: var(--theme--background);
 	color: var(--theme--text);
 	border: var(--border-width--main) solid var(--theme--border);
 }
 
+/* Versteckt den Container im Standardmodus */
 .layout_sticky_ellipse,
 .card_visual_elipse,
 .card_visual_elipse_1,
@@ -932,6 +984,7 @@ select#select-1 {
 	display: none;
 }
 
+/* Zeigt den Container nur bei data-theme="dark" */
 .page_wrap[data-theme='dark'] .layout_sticky_ellipse,
 .page_wrap[data-theme='dark'] .card_visual_elipse_1,
 .page_wrap[data-theme='dark'] .card_visual_elipse_2,
@@ -939,18 +992,25 @@ select#select-1 {
 	display: block;
 }
 
+/* Zeigt das Gradient-Element nur bei data-theme="light" */
 .page_wrap[data-theme='light'] .design_gradient_wrap {
 	display: block;
 }
 
+/* Zeigt das Gradient-Element nur bei data-theme="light" */
 .page_wrap[data-theme='light'] .layout_column_el {
 	background-color: var(--theme--footer);
 }
+/* Zeigt das Gradient-Element nur bei data-theme="light" */
 .page_wrap[data-theme='dark'] .layout_column_el {
 	background-color: var(--theme--footer);
 }
 
 /* responsive */
+/* desktop */
+:root {
+	/* custom */
+}
 /* tablet */
 @media screen and (max-width: 991px) {
 	:root {
@@ -1015,16 +1075,32 @@ select#select-1 {
 		--size--16rem: 8rem;
 	}
 }
+/* portrait */
+@media screen and (max-width: 479px) {
+	:root {
+		/* custom */
+	}
+}
 
+/* This file contains the CSS for the box styles */
+/* Prevent opacity from being set to 0 in Webflow design mode */
+/* html.wf-design-mode .layout_box_style {
+	opacity: 1;
+}
 
+.layout_box_style {
+	opacity: 1; 
+	animation-fill-mode: forwards; 
+} */
 
 /* Base datetime edit styles */
 ::-webkit-datetime-edit,
 ::-webkit-datetime-edit-fields-wrapper,
 ::-webkit-datetime-edit-text {
-	color: var(--theme--text); 
+	color: var(--theme--text); /* Text color */
 }
 
+/* Specific datetime edit fields */
 ::-webkit-datetime-edit-year-field,
 ::-webkit-datetime-edit-month-field,
 ::-webkit-datetime-edit-week-field,
@@ -1034,35 +1110,35 @@ select#select-1 {
 ::-webkit-datetime-edit-second-field,
 ::-webkit-datetime-edit-millisecond-field,
 ::-webkit-datetime-edit-ampm-field {
-	color: var(--theme--text); 
-	background-color: transparent; 
+	color: var(--theme--text); /* Text color */
+	background-color: transparent; /* Background color */
 }
 
 ::-webkit-inner-spin-button {
 	display: none;
 }
 :root {
-	--color-scheme: none;
+	--color-scheme: none; /* Standardmäßig kein color-scheme gesetzt */
 }
 
 [data-theme='dark'] {
-	--color-scheme: light dark;
+	--color-scheme: light dark; /* color-scheme setzen, wenn dark theme aktiv ist */
 }
 
 input[type='date'] {
-	color: currentColor !important; 
-	color-scheme: var(--color-scheme);
+	color: currentColor !important; /* Setzt die Textfarbe auf die Eingabefarbe */
+	color-scheme: var(--color-scheme); /* Verwendet die definierte CSS-Variable */
 	position: relative;
 }
 input[type='date']::placeholder {
-	opacity: 1; /
+	opacity: 1; /* Optionale Einstellung, um sicherzustellen, dass der Placeholder vollständig sichtbar ist */
 }
 
 input[type='date']::-webkit-calendar-picker-indicator {
 	position: absolute;
 	left: 10px;
 	opacity: 0.6;
-	color: currentColor; 
+	color: currentColor; /* Set icon color to match text color */
 }
 input[type='date']::-webkit-datetime-edit-text,
 input[type='date']::-webkit-datetime-edit-month-field,
@@ -1109,6 +1185,7 @@ input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
 }
 
 .background_gradient_portfolio {
+	/* Ellipse Portfolio BG */
 	position: absolute;
 	width: 41.5rem;
 	height: 27.375rem;
@@ -1130,6 +1207,7 @@ input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
 }
 
 .layout_illu_contain {
+	/* position: absolute; */
 	overflow: visible;
 	width: 943.74px;
 	height: 868.69px;
@@ -1151,7 +1229,7 @@ input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
 	opacity: 0;
 	animation: fade-in 2.5s ease-in forwards;
 }
-
+/* Standard-Ellipsen-Stile */
 .layout_ellipse_contain {
 	position: absolute;
 	width: 697.34px;
@@ -1164,7 +1242,7 @@ input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
 	opacity: 0;
 	animation: fade-in 3s ease-in forwards;
 }
-
+/* Keyframes für das Einblenden */
 @keyframes fade-in {
 	from {
 		opacity: 0;
@@ -1304,3 +1382,4 @@ input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
 	left: 0;
 	opacity: 1;
 }
+
