@@ -63,7 +63,6 @@
 .line-y {
 	transform: translate(0px, -0.1em);
 	min-height: 1.17em;
-	/* clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%); */
 }
 
 .line-fade {
@@ -118,7 +117,7 @@ html.wf-design-mode .cms_item_text {
 
 .portfolio_cms_item {
 	position: relative;
-	transition: color 0.25s ease-out; /* Übergangseffekt für die Textfarbe */
+	transition: color 0.25s ease-out; 
 }
 
 .cms_item_wrap {
@@ -194,7 +193,6 @@ html.wf-design-mode .cms_item_text {
 	transform: translateY(100%);
 }
 
-/* Farbänderung für aktive cms_item_row */
 .portfolio_cms_item.active .cms_item_row {
 	color: var(--swatch--brand);
 }
@@ -272,7 +270,7 @@ html.wf-design-mode .w-pagination-wrapper.pagination {
 }
 
 .filter_search {
-	position: absolute; /* Änderung: Von absolute zu relative für eine bessere Platzierung */
+	position: absolute; 
 	display: flex;
 	height: 100%;
 	align-items: center;
@@ -280,23 +278,23 @@ html.wf-design-mode .w-pagination-wrapper.pagination {
 }
 
 .search-with-icon {
-	padding-right: 32px; /* Passe diesen Wert nach Bedarf an */
+	padding-right: 32px; 
 	background-color: transparent;
-	border: none; /* Standard Border entfernt */
-	outline: none; /* Entfernt die Standard-Umrandung beim Fokussieren */
-	color: var(--swatch--brand-gray-500); /* Ändere die Textfarbe */
+	border: none; 
+	outline: none; 
+	color: var(--swatch--brand-gray-500); /
 	max-width: 16ch;
 	width: 100%;
 }
 
 .search-with-icon::placeholder {
-	color: var(--swatch--brand-gray-500); /* Ändere die Platzhalterfarbe */
+	color: var(--swatch--brand-gray-500); 
 }
 
 .search-with-icon:focus {
-	border: none; /* Sicherstellen, dass keine Border angezeigt wird */
-	outline: none; /* Sicherstellen, dass keine Umrandung angezeigt wird */
-	color: var(--theme--text); /* Ändere die Textfarbe */
+	border: none; 
+	outline: none; 
+	color: var(--theme--text); 
 }
 
 .search-icon {
@@ -304,14 +302,14 @@ html.wf-design-mode .w-pagination-wrapper.pagination {
 	right: 10px;
 	top: 50%;
 	transform: translateY(-50%);
-	width: 16px; /* Passe die Größe des Icons an */
+	width: 16px; 
 	height: 16px;
-	pointer-events: none; /* Verhindert, dass das Icon klickbar ist */
+	pointer-events: none; 
 }
 
 .filter_search:focus-within .search-icon path {
 	fill: var(--swatch--brand);
-	transition: 0.3s ease-out; /* Ändere die Farbe des Icons, wenn das Input-Feld fokussiert ist */
+	transition: 0.3s ease-out; 
 }
 
 html.wf-design-mode .portfolio_filter_menu {
@@ -328,14 +326,14 @@ html.wf-design-mode .layout_footer_legal {
 	min-height: 60vh;
 }
 
-/* Grundlegende Stile für die Team-Items */
+
 
 .team_list_contain {
 	display: grid;
-	grid-auto-flow: dense; /* Füllt die Lücken im Grid automatisch */
+	grid-auto-flow: dense; 
 }
 
-/* Standard-Layout für Desktop (min-width: 991px) */
+
 
 .team_list_item {
 	grid-column: auto / span 1;
@@ -366,20 +364,20 @@ html.wf-design-mode .layout_footer_legal {
 	}
 }
 
-/* Standardmäßig alle Bilder in Graustufen */
+
 [data-tp='img'] {
 	filter: grayscale(100%);
-	transition: filter 0.3s ease; /* Sanfter Übergang für den Hover-Effekt */
+	transition: filter 0.3s ease; 
 }
 
-/* Hover-Effekt für Bilder: Zurück zur Farbe */
+
 .team_list_item:hover [data-tp='img'] {
 	filter: grayscale(0%);
 }
 
-/* Stil für das aktive Element */
+
 .team_list_item.active [data-tp='img'] {
-	filter: grayscale(0%); /* Bild bleibt farbig */
+	filter: grayscale(0%); 
 }
 
 .layout_narrow_contain {
@@ -390,16 +388,15 @@ input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
 	border-width: var(--border-width--main) !important;
-	/* border-color: var(--swatch--brand) !important; */
 	-webkit-box-shadow: 0 0 0px 1000px var(--theme--card-bg) inset !important;
 	-webkit-text-fill-color: var(--theme--text) !important;
 	transition: background-color 5000s ease-in-out 0s !important;
 	color: var(
 		--theme--text
-	) !important; /* Sicherstellen, dass die Textfarbe korrekt ist */
+	) !important; 
 	caret-color: var(
 		--theme--text
-	) !important; /* Setzt die Cursorfarbe auf dieselbe Farbe wie der Text */
+	) !important; 
 }
 
 .form_main_field_input:focus-visible {
@@ -465,31 +462,6 @@ html.wf-design-mode .layout_ppreview_wrap {
 	.legal_nav_sub_wrap {
 	grid-template-rows: 1fr;
 }
-
-/* html.wf-design-mode .layout_team_contain {
-	height: auto;
-	display: block;
-}
-
-.layout_team_contain.u-container {
-	height: auto;
-	display: flex;
-	justify-content: center;
-	align-items: flex-end;
-} */
-
-/* html.wf-design-mode [data-feature='title'],
-html.wf-design-mode [data-card='svg'],
-html.wf-design-mode [data-card='text'],
-html.wf-design-mode [data-card='title'] {
-	opacity: 1;
-}
-[data-feature='title'],
-[data-card='svg'],
-[data-card='text'],
-[data-card='title'] {
-	opacity: 0;
-} */
 
 :root {
 	--font--inherit: inherit;
@@ -647,7 +619,6 @@ footer {
 }
 .custom-substack-widget {
 	gap: var(--size--1rem);
-	/* contain-intrinsic-block-size: AUTO 48px; */
 	border: none;
 	display: inline-flex;
 	height: auto;
@@ -788,18 +759,18 @@ html.wf-design-mode .layout_transition_wrap {
 .logo_wrap.is-v2 {
 	display: none;
 	opacity: 0;
-	transform: translateY(-100%); /* Start außerhalb des sichtbaren Bereichs */
+	transform: translateY(-100%);
 }
 
 html.wf-design-moide .logo_wrap.is-v1 {
-	display: block; /* Startet unsichtbar */
+	display: block; 
 	opacity: 1;
-	transform: translateY(0%); /* Start außerhalb des sichtbaren Bereichs */
+	transform: translateY(0%);
 }
 html.wf-design-mode .logo_wrap.is-v2 {
-	display: block; /* Startet unsichtbar */
+	display: block; 
 	opacity: 1;
-	transform: translateY(0%); /* Start außerhalb des sichtbaren Bereichs */
+	transform: translateY(0%); */
 }
 
 html.wf-design-mode .page_contain {
@@ -811,21 +782,6 @@ html.wf-design-mode .page_contain {
 	display: flex;
 	align-items: center;
 }
-
-/* .layout_hero_titel {
-	font-kerning: none;
-} */
-
-/* .layout_ppreview_wrap {
-	height: 250vh;
-}
-.layout_ppreview_grid {
-	height: 100%;
-}
-
-.cms_portfolio_wrapper {
-	height: 100%;
-} */
 
 /* CSS Variables */
 /* theme light */
@@ -975,7 +931,6 @@ select#select-1 {
 	border: var(--border-width--main) solid var(--theme--border);
 }
 
-/* Versteckt den Container im Standardmodus */
 .layout_sticky_ellipse,
 .card_visual_elipse,
 .card_visual_elipse_1,
@@ -984,7 +939,6 @@ select#select-1 {
 	display: none;
 }
 
-/* Zeigt den Container nur bei data-theme="dark" */
 .page_wrap[data-theme='dark'] .layout_sticky_ellipse,
 .page_wrap[data-theme='dark'] .card_visual_elipse_1,
 .page_wrap[data-theme='dark'] .card_visual_elipse_2,
@@ -992,25 +946,18 @@ select#select-1 {
 	display: block;
 }
 
-/* Zeigt das Gradient-Element nur bei data-theme="light" */
 .page_wrap[data-theme='light'] .design_gradient_wrap {
 	display: block;
 }
 
-/* Zeigt das Gradient-Element nur bei data-theme="light" */
 .page_wrap[data-theme='light'] .layout_column_el {
 	background-color: var(--theme--footer);
 }
-/* Zeigt das Gradient-Element nur bei data-theme="light" */
 .page_wrap[data-theme='dark'] .layout_column_el {
 	background-color: var(--theme--footer);
 }
 
 /* responsive */
-/* desktop */
-:root {
-	/* custom */
-}
 /* tablet */
 @media screen and (max-width: 991px) {
 	:root {
@@ -1075,32 +1022,14 @@ select#select-1 {
 		--size--16rem: 8rem;
 	}
 }
-/* portrait */
-@media screen and (max-width: 479px) {
-	:root {
-		/* custom */
-	}
-}
 
-/* This file contains the CSS for the box styles */
-/* Prevent opacity from being set to 0 in Webflow design mode */
-/* html.wf-design-mode .layout_box_style {
-	opacity: 1;
-}
 
-.layout_box_style {
-	opacity: 1; 
-	animation-fill-mode: forwards; 
-} */
-
-/* Base datetime edit styles */
 ::-webkit-datetime-edit,
 ::-webkit-datetime-edit-fields-wrapper,
 ::-webkit-datetime-edit-text {
-	color: var(--theme--text); /* Text color */
+	color: var(--theme--text); 
 }
 
-/* Specific datetime edit fields */
 ::-webkit-datetime-edit-year-field,
 ::-webkit-datetime-edit-month-field,
 ::-webkit-datetime-edit-week-field,
@@ -1110,35 +1039,35 @@ select#select-1 {
 ::-webkit-datetime-edit-second-field,
 ::-webkit-datetime-edit-millisecond-field,
 ::-webkit-datetime-edit-ampm-field {
-	color: var(--theme--text); /* Text color */
-	background-color: transparent; /* Background color */
+	color: var(--theme--text); 
+	background-color: transparent; 
 }
 
 ::-webkit-inner-spin-button {
 	display: none;
 }
 :root {
-	--color-scheme: none; /* Standardmäßig kein color-scheme gesetzt */
+	--color-scheme: none; 
 }
 
 [data-theme='dark'] {
-	--color-scheme: light dark; /* color-scheme setzen, wenn dark theme aktiv ist */
+	--color-scheme: light dark; 
 }
 
 input[type='date'] {
-	color: currentColor !important; /* Setzt die Textfarbe auf die Eingabefarbe */
-	color-scheme: var(--color-scheme); /* Verwendet die definierte CSS-Variable */
+	color: currentColor !important; 
+	color-scheme: var(--color-scheme); 
 	position: relative;
 }
 input[type='date']::placeholder {
-	opacity: 1; /* Optionale Einstellung, um sicherzustellen, dass der Placeholder vollständig sichtbar ist */
+	opacity: 1; 
 }
 
 input[type='date']::-webkit-calendar-picker-indicator {
 	position: absolute;
 	left: 10px;
 	opacity: 0.6;
-	color: currentColor; /* Set icon color to match text color */
+	color: currentColor; 
 }
 input[type='date']::-webkit-datetime-edit-text,
 input[type='date']::-webkit-datetime-edit-month-field,
@@ -1185,7 +1114,6 @@ input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
 }
 
 .background_gradient_portfolio {
-	/* Ellipse Portfolio BG */
 	position: absolute;
 	width: 41.5rem;
 	height: 27.375rem;
@@ -1207,7 +1135,6 @@ input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
 }
 
 .layout_illu_contain {
-	/* position: absolute; */
 	overflow: visible;
 	width: 943.74px;
 	height: 868.69px;
@@ -1216,7 +1143,6 @@ input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
 	opacity: 0;
 	animation: fade-in 2s ease-in forwards;
 }
-/* nav visual elipse */
 .nav_visual_elipse {
 	width: 784.43px;
 	height: 626.39px;
@@ -1229,7 +1155,6 @@ input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
 	opacity: 0;
 	animation: fade-in 2.5s ease-in forwards;
 }
-/* Standard-Ellipsen-Stile */
 .layout_ellipse_contain {
 	position: absolute;
 	width: 697.34px;
@@ -1242,7 +1167,6 @@ input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
 	opacity: 0;
 	animation: fade-in 3s ease-in forwards;
 }
-/* Keyframes für das Einblenden */
 @keyframes fade-in {
 	from {
 		opacity: 0;
@@ -1353,9 +1277,6 @@ input[type='date'].date-input--has-value::-webkit-datetime-edit-year-field {
 	opacity: 1;
 }
 
-/* .blog_item_contain:hover {
-	position: relative;
-} */
 .blog_item_contain {
 	position: relative;
 	overflow: hidden;
